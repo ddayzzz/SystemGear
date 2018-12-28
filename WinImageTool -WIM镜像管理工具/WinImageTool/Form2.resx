@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>WinImageTool.exe 系统齿轮 Windows 映像管理工具 1.10
+
+WinImageTool.exe 的命令行有以下的约定 :
+
+WinImageTool.exe &lt;Select&gt; &lt;Flags&gt; {SubCommands}
+Select : 被选择的文件或文件夹
+Flags  : 启动的标志
+SubCommands : 各个命令
+
+WinImageTool.exe 所使用的变量(在使用前,请设置为实际的路径)
+&lt;FolderName&gt; : 被选中的文件夹的路径
+&lt;SelectPath&gt;    : 被选中的文件夹/Windows 映像文件的路径
+&lt;WimPath&gt;       : 被选中的Windows 映像路径或指定的Windows 映像文件的路径
+&lt;ImageName&gt; : Windows 映像文件的名称
+&lt;ImageInfo&gt;     : Windows 映像文件的注释名称
+&lt;ImageVersion&gt; : Windows 映像文件的版本
+&lt;ConfigFilePath&gt;: 在处理Windows 映像时 , 所用的配置文件
+&lt;ImageIndex&gt;  : 被选中的或指定Windows 映像中映像卷的编号
+&lt;TXTPath&gt;        : 保存Windows 映像信息的文本路径(*.txt)
+&lt;SwmPath&gt;      : Windows 映像分卷文件的路径(*.swm)
+
+WinImageTool.exe 的附加命令行选项
+/Norpfix  启用或禁用禁用重分析点标记修正
+/Boot       该可以/不可以(True/False)启动
+/Check    启用或禁用检查文件的完整性
+/Verify    启用或禁用通过检查错误和文件重复
+/Scroll    启用或禁用滚动输出以进行重定向
+
+WinImageTool.exe 的开关的值
+/Compress : maximum(最大压缩)fast(快速)none(不压缩)
+/Version     : HomeBasic | HomePremium | Starter | Ultimate | Business | Enterprise | ServerDatacenter | ServerEnterprise | ServerStandard 
+
+WinImageTool.exe 的注意选项
+1."[]"内的开关为可选的参数
+
+WinImageTool.exe 的各个有效的命令行
+/Select="&lt;FolderName&gt;" /Flags="Create" /WimPath="{&lt;SelectPath&gt;|&lt;WimPath&gt;}" /CreateNow="{True|False}" [/ImageName="&lt;ImageName&gt;" /ImageInfo="&lt;ImageInfo&gt;" /Version="&lt;ImageVersion&gt;" /Compress="{maximum|fast|none}" /LoadConfigFile="&lt;ConfigFilePath&gt;" /Boot="{True|False}" /Check="{True|False}" /Verify="{True|False}" /Norpfix="{True|False}" /Norpfix="{True|False}" /Scroll="{True|False}"]
+示例 : /Select="F:\MyFolder" /Flags="Create" /WimPath="H:\Data.wim" /CreateNow="True" /boot="True" /cehck="True" /verify="True"
+捕获"F:\MyFolder"文件夹下的所有内容至映像"H:\Data.Wim"
+
+/Select="&lt;WimPath&gt;" /Flags="Apply" /FolderPath="{&lt;SelectPath&gt;|&lt;FolderPath&gt;}" /ImageIndex="&lt;ImageIndex&gt;" /ApplyNow="{True|False}"[/Check="{True | False}" /Verify="{True | False}" /Norpfix="{True | False}" /Scroll="{True | False}"]
+示例 : /Select="H:\Data.wim" /Flags="Apply" /FolderPath="H:\ApplyPath" /ImageIndex="2" /ApplyNow="True" /Check="True"
+应用映像"H:\Data.Wim"至文件夹"H:\ApplyPath"
+
+/Select="&lt;WimPath&gt;" /Flags="Delete" /ImageIndex="&lt;ImageIndex&gt;" /DeleteNow="{True|False}"
+示例 : /Select="H:\Data.wim" /Flags="Delete" /ImageIndex="2" /DeleteNow="True"
+删除映像"H:\Data.Wim"的映像卷"2"
+
+/Select="&lt;WimPath&gt;" /Flags="Info" [/SaveInfoPath="{&lt;SelectPath&gt;|&lt;TXTPath&gt;}"]
+示例 : /Select="H:\Data.wim" /Flags="Info" /SaveInfoPath="H:\MyWimInfo.txt"
+获取映像"H:\Data.Wim"的信息并保存文本至"H:\MyWimInfo.txt"
+
+/Select="&lt;WimPath&gt;" /Flags="Export" /ImageIndex="&lt;ImageIndex&gt;" /NewWimPath="{&lt;SelectPath&gt;|&lt;WimPath&gt;}" /ExportNow="{True|False}" [/ImageName="Name" /Compress="{None|Fast|Maximum}" /Boot="{True|False}" /Check="{True|False}"]
+示例 : /Select="H:\Data.wim" /Flags="Export" /ImageIndex="1" /NewWimPath="H:\DataNew.wim" /ExportNow="True" /ImageName="导出的映像" /Boot="True"
+导出映像"H:\Data.wim"的映像卷"1"至新的映像文件"H:\DataNew.wim"
+
+/Select="&lt;WimPath&gt;" /Flags="Split" /Size="Size" /SavePath="&lt;SelectPath|SwmPath&gt;" /SplitNow="{True|False}" [/Check="{ True|False}"]
+示例 : /Select="H:\Data.wim" /Flags="Split" /Size="20" /SavePath="H:\DataSplit.swm" /SplitNow="True"
+将映像"H:\Data.wim"以每个20MB大小进行拆分并保存至"H:\DataSplit.swm"
+
+/Select="&lt;WimPath&gt;" /Flags="Append" /FolderPath="&lt;FolderPath&gt;" /AppendNow="{True|False}" [/ImageName="&lt;ImageName&gt;" /Boot="{True|False}" /Verify="{True|False}" /Check="{True|False}" /Scroll="{True|False}"]
+示例 : /Select="H:\Data.wim" /Flags="Append" /FolderPath="H:\Disk1" /AppendNow="True" /ImageName="附加的映像" /Boot="True"
+捕获目录"H:\Disk1"的所有的文件和文件夹并附加到已存在的映像"H:\Data.wim"</value>
+  </data>
+</root>

@@ -1,0 +1,26 @@
+命令行 ：
+VDISKMGR.EXE [/OC] [/UL] [/UD] [/CL] </FileName> </Size> </VDiskType> </Letter>
+
+/OC:仅创建虚拟磁盘 需要<FileName>、<Size>、<VDiskType>3个参数
+       FileName : 要创建的虚拟磁盘文件的路径
+       Size : 要创建的虚拟磁盘文件的大小（单位MB）
+       VDiskType : 要创建的虚拟磁盘文件的格式 [Expandable] 动态扩展 [Fixed]固定大小
+示例：VDISKMGR.EXE /OC /"D:\MyDisk.vhd" /20480 /Expandable
+
+/UL:从系统卸载虚拟磁盘 需要<FileName>1个参数
+       FileName : 要创建的虚拟磁盘文件的路径
+示例：VDISKMGR.EXE /UL /"D:\MyDisk.vhd"
+
+/UD:从系统卸载虚拟磁盘并删除虚拟磁盘文件 需要<FileName>1个参数
+       FileName : 要创建的虚拟磁盘文件的路径
+       示例：VDISKMGR.EXE /UD /"D:\MyDisk.vhd"
+
+/CL:创建虚拟磁盘并加载到系统中 需要<FileName>、<Size>、<VDiskType>、<Letter>4个参数
+       FileName : 要创建的虚拟磁盘文件的路径
+       Size : 要创建的虚拟磁盘文件的大小（单位MB）
+       VDiskType : 要创建的虚拟磁盘文件的格式 [Expandable] 动态扩展 [Fixed]固定大小
+       Letter : 加载的虚拟磁盘文件的盘符 注意指定的盘符不要与计算机中已存在的盘符相同
+示例：VDISKMGR.EXE /CL /"D:\MyDisk.vhd" /20480 /Expandable /Z
+
+注意：所有的操作都不会有提示（除错误的提示外）
+

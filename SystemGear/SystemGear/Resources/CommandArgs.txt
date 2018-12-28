@@ -1,0 +1,78 @@
+SystemGear.exe [/F] [/M=Itmes] [/L=<FileName>] [/B] [/D] [/C /Folder="<FolderPath>"] [/I </Show>][/H] [/P=<Package> </Operate>][/?] </FunctionCode> </FunctionFirstIndex> </FunctionSecondIndex> [/Q=<FunctionName>]
+
+/M   进入主界面的选项卡
+/F    进入系统齿轮的各个功能
+/L    加载配置文件
+/B    内部的返回参数
+/D    清除由系统齿轮产生的临时文件,清理完成后,转至主界面<未启用>
+/C    系统齿轮剪切板功能
+/I     创建系统齿轮的快捷方式图标
+/P    解压压缩包(已移除)
+/H    显示帮助
+/?     显示帮助
+/Q    打开附加功能<开发中>
+
+/M=Items Items为主界面的一级选项卡与二级选项卡的索引(从1开始)集合,形式为:(一级选项卡索引,二级选项卡索引)
+                 一级选项卡索引    对应项目   二级选项卡索引   对应项目
+                           01             常用设置            01             常用设置\系统齿轮推荐
+                                                                       02             常用设置\所有工具
+                                                                       03             常用设置\用户自定义
+                           02             所有设置            N/A           N/A
+                           03             程序设置            N/A           N/A
+                           04             帮助中心            N/A           N/A
+                注意: 如果该一级选项卡中没有二级选项卡,如02 03等,可以任意输入一组数字代替,例如 (02,03) (03,88)都可
+                示例: SystemGear.exe /M=01,01 切换至常用设置\系统齿轮推荐
+                        SystemGear.exe /M=01,03 切换至常用设置\用户自定义
+                        SystemGear.exe /M=02,99 切换至所有设置
+
+/F </FunctionCode> </FunctionFirstIndex> </FunctionSecondIndex>
+     FunctionCode : 功能所在窗体的代码,例如 系统图标功能位于 系统外观设置\资源管理器,因此它的所在窗体的代码为SYSVIE
+         代码       对应的窗体
+        SYSVIE    系统外观设置\资源管理器
+
+         注意: 在使用时要在 功能所在窗体的代码前加上反斜线 例如 /SYSVIE 并且作为程序的第一个参数,不可调换
+         正确示例: SystemGear.exe /F /SYSVIE /01 /02 
+         错误示例: SystemGear.exe /F /01 /02 /SYSVIE 原因:顺序弄反了
+                        SystemGear.exe /F /SVSVIE /01 /02 原因:不存在SVSVIE
+
+      FunctionFirstIndex : 功能所在的一级选项卡的索引,例如桌面图标位于系统图标的选项之内,因此它的的一级选项卡索引为01
+          一级选项卡索引    对应的功能
+                   01              系统图标
+                   02              GUID图标
+                   03              文件夹美化
+                   ....              ....
+         注意: 在使用时要在 功能所在窗体的代码前加上反斜线 例如 /SYSVIE 并且作为程序的第一个参数,不可调换
+         正确示例: SystemGear.exe /F /SYSVIE /01 /02 
+         错误示例: SystemGear.exe /F /01 /02 /SYSVIE 原因:顺序弄反了
+                        SystemGear.exe /F /SVSVIE /01 /02 原因:不存在SVSVIE
+      FunctionSecondIndex : 功能所在的二级选项卡的索引,例如系统图标\扩展名管理 的一级选项卡的索引为01 那么其二级选项卡的索引为03
+          一级选项卡索引     二级选项卡索引     对应功能
+                  01                         01              系统图标\桌面图标
+                  01                         02              系统图标\系统图标
+                  01                         03              系统图标\扩展名图标
+                 .....                          .....              ......
+          示例: SystemGear.exe /F /SYSVIE /01 /03 启动至系统图标\扩展名图标
+                  SystemGear.exe /F /SYSVIE /08 /01 启动至系统启动\虚拟磁盘
+
+    完整的示例: SystemGear.exe /F /SYSVIE /07 /01
+                 
+/I 用于将系统齿轮部署到系统之后 创建快捷方式 写入注册表等后续工作
+   </Show> 完成后是否显示
+                 T 显示
+                 F 不显示
+     示例: SystemGear.exe  /I /T
+
+/P 解压压缩包 *.SGPAK
+    <Package> 压缩包
+    <Operate> 操作
+     A 询问 解压完后不会关闭主界面
+     N 静默 解压后关闭窗体
+     示例: SystemGear.exe /P="C:\SystemGear\Config.sgpak" /A
+
+/L 加载配置文件 *.SGCF
+    <FileName> SGCF配置文件
+    示例: SystemGear.exe /L="C:\SystemGear\Config.sgcf"
+
+/C 系统齿轮剪切板功能
+     </Folder="FolderPath"> 文件夹
+     示例: SystemGear.exe /C /Folder="C:\ChooseFolder"

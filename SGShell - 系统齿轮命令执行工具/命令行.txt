@@ -1,0 +1,9 @@
+SGSheller.exe /S="<Command>"
+<Command> 
+StartScreen 显示开始菜单(开始屏幕)
+ReStartExplorer 重启资源管理器
+ShellExplorer 启动资源管理器
+CloseScreen 关闭屏幕
+OpenCDDoor 打开光驱门
+CloseCDDoor 关闭光驱门
+RefreshIconCache 重建缩略图缓存

@@ -1,0 +1,1110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE22A559-C441-4E88-82CC-8915962B090D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SystemGear</RootNamespace>
+    <AssemblyName>SystemGear</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SG3Logo_Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=2.3.0.22156, Culture=neutral, PublicKeyToken=0d013ddd5178a2ae, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-CLSIDMGR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-CLSIDMGR.Designer.cs">
+      <DependentUpon>SGUserControl-CLSIDMGR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-CreateImagefrompart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-CreateImagefrompart.Designer.cs">
+      <DependentUpon>SGUserControl-CreateImagefrompart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-Feedbackpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-Feedbackpage.Designer.cs">
+      <DependentUpon>SGUserControl-Feedbackpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-HomePageChoose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-HomePageChoose.Designer.cs">
+      <DependentUpon>SGUserControl-HomePageChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-EditMainTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-EditMainTile.Designer.cs">
+      <DependentUpon>SGUserControl-EditMainTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-IEMgr-NormalSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-IEMgr-NormalSetting.Designer.cs">
+      <DependentUpon>SGUserControl-IEMgr-NormalSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-SGInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-SGInformation.Designer.cs">
+      <DependentUpon>SGUserControl-SGInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-SystemToolBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-SystemToolBox.Designer.cs">
+      <DependentUpon>SGUserControl-SystemToolBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGClickItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGClickItems.Designer.cs">
+      <DependentUpon>SGClickItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGLinkPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="控件\SGLinkPage.Designer.cs">
+      <DependentUpon>SGLinkPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGModernButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="控件\SGModernButton.Designer.cs">
+      <DependentUpon>SGModernButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGMultiFunctionsPanels.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGMultiFunctionsPanels.Designer.cs">
+      <DependentUpon>SGMultiFunctionsPanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-ChooseThemes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-ChooseThemes.Designer.cs">
+      <DependentUpon>SGUserControl-ChooseThemes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGTileContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="控件\SGTileContainer.Designer.cs">
+      <DependentUpon>SGTileContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGTileMgrPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGTileMgrPanel.Designer.cs">
+      <DependentUpon>SGTileMgrPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\ControlState.cs" />
+    <Compile Include="Enums\ButtonStatus.cs" />
+    <Compile Include="Enums\ClassStyle.cs" />
+    <Compile Include="Enums\MouseOperate.cs" />
+    <Compile Include="Enums\WindowStyle.cs" />
+    <Compile Include="Enums\WindowStyleEx.cs" />
+    <Compile Include="功能控件\SGUserControl-AddAndEditRunCommands.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-AddAndEditRunCommands.Designer.cs">
+      <DependentUpon>SGUserControl-AddAndEditRunCommands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-AddAndEditWinXMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-AddAndEditWinXMenu.Designer.cs">
+      <DependentUpon>SGUserControl-AddAndEditWinXMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-AddOrEditBootMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-AddOrEditBootMenu.Designer.cs">
+      <DependentUpon>SGUserControl-AddOrEditBootMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-CreateNewFileType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-CreateNewFileType.Designer.cs">
+      <DependentUpon>SGUserControl-CreateNewFileType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-CreateRightMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-CreateRightMenu.Designer.cs">
+      <DependentUpon>SGUserControl-CreateRightMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-HelpUserToDo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-HelpUserToDo.Designer.cs">
+      <DependentUpon>SGUserControl-HelpUserToDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-PinURLToTaskBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-PinURLToTaskBar.Designer.cs">
+      <DependentUpon>SGUserControl-PinURLToTaskBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-EditRightMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="功能控件\SGUserControl-EditRightMenu.Designer.cs">
+      <DependentUpon>SGUserControl-EditRightMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGCombobox.Designer.cs">
+      <DependentUpon>SGCombobox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGNumberControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGNumberControl.Designer.cs">
+      <DependentUpon>SGNumberControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGRichTextBox.Designer.cs">
+      <DependentUpon>SGRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGRightMenus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGRightMenus.Designer.cs">
+      <DependentUpon>SGRightMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGWebBowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGWebBowser.Designer.cs">
+      <DependentUpon>SGWebBowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-BackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-BackgroundForm.Designer.cs">
+      <DependentUpon>SGForm-BackgroundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-FindFileListAndShowInListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-FindFileListAndShowInListView.Designer.cs">
+      <DependentUpon>SGForm-FindFileListAndShowInListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-GuidDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-GuidDialog.Designer.cs">
+      <DependentUpon>SGForm-GuidDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-Main.Designer.cs">
+      <DependentUpon>SGForm-Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-MessageDialog-Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-MessageDialog-Info.Designer.cs">
+      <DependentUpon>SGForm-MessageDialog-Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGListView.Designer.cs">
+      <DependentUpon>SGListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-CommonDialogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-CommonDialogs.Designer.cs">
+      <DependentUpon>SGForm-CommonDialogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-MessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-MessageDialog.Designer.cs">
+      <DependentUpon>SGForm-MessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-MoreFunctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-MoreFunctions.Designer.cs">
+      <DependentUpon>SGForm-MoreFunctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-SystemStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-SystemStyle.Designer.cs">
+      <DependentUpon>SGForm-SystemStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGChooseBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="控件\SGChooseBox.Designer.cs">
+      <DependentUpon>SGChooseBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGRadioButton.Designer.cs">
+      <DependentUpon>SGRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGSlidingDrawer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="控件\SGSlidingDrawer.Designer.cs">
+      <DependentUpon>SGSlidingDrawer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGCheckBox.Designer.cs">
+      <DependentUpon>SGCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGLabel.Designer.cs">
+      <DependentUpon>SGLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-TasksChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-TasksChoose.Designer.cs">
+      <DependentUpon>SGForm-TasksChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体UI\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体UI\RenderHelper.cs" />
+    <Compile Include="窗体\SGForm-UpdateProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-UpdateProgram.Designer.cs">
+      <DependentUpon>SGForm-UpdateProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SGForm-WIN10STYLE.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SGForm-WIN10STYLE.Designer.CS">
+      <DependentUpon>SGForm-WIN10STYLE.CS</DependentUpon>
+    </Compile>
+    <Compile Include="类或代码\SGMain.cs" />
+    <Compile Include="类或代码\SGSystemStyle.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="类或代码\SGFunction.cs" />
+    <Compile Include="控件\SGItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="控件\SGItems.Designer.cs">
+      <DependentUpon>SGItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGNormalButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGNormalButton.Designer.cs">
+      <DependentUpon>SGNormalButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGTabPageControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGTabPageControl.Designer.cs">
+      <DependentUpon>SGTabPageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGTextBox.Designer.cs">
+      <DependentUpon>SGTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="控件\SGTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="控件\SGTreeView.Designer.cs">
+      <DependentUpon>SGTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体UI\SystemButton.cs" />
+    <Compile Include="窗体UI\SystemButtonManager.cs" />
+    <Compile Include="窗体UI\Win32.cs" />
+    <EmbeddedResource Include="功能控件\SGUserControl-AddAndEditRunCommands.resx">
+      <DependentUpon>SGUserControl-AddAndEditRunCommands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-AddAndEditWinXMenu.resx">
+      <DependentUpon>SGUserControl-AddAndEditWinXMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-AddOrEditBootMenu.resx">
+      <DependentUpon>SGUserControl-AddOrEditBootMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-CLSIDMGR.resx">
+      <DependentUpon>SGUserControl-CLSIDMGR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-CreateImagefrompart.resx">
+      <DependentUpon>SGUserControl-CreateImagefrompart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-Feedbackpage.resx">
+      <DependentUpon>SGUserControl-Feedbackpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-HomePageChoose.resx">
+      <DependentUpon>SGUserControl-HomePageChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-CreateNewFileType.resx">
+      <DependentUpon>SGUserControl-CreateNewFileType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-CreateRightMenu.resx">
+      <DependentUpon>SGUserControl-CreateRightMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-EditMainTile.resx">
+      <DependentUpon>SGUserControl-EditMainTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-HelpUserToDo.resx">
+      <DependentUpon>SGUserControl-HelpUserToDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-IEMgr-NormalSetting.resx">
+      <DependentUpon>SGUserControl-IEMgr-NormalSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-PinURLToTaskBar.resx">
+      <DependentUpon>SGUserControl-PinURLToTaskBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-EditRightMenu.resx">
+      <DependentUpon>SGUserControl-EditRightMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-SGInformation.resx">
+      <DependentUpon>SGUserControl-SGInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-SystemToolBox.resx">
+      <DependentUpon>SGUserControl-SystemToolBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGClickItems.resx">
+      <DependentUpon>SGClickItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGLinkPage.resx">
+      <DependentUpon>SGLinkPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGModernButton.resx">
+      <DependentUpon>SGModernButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGCombobox.resx">
+      <DependentUpon>SGCombobox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGLabel.resx">
+      <DependentUpon>SGLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGTileContainer.resx">
+      <DependentUpon>SGTileContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体UI\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="功能控件\SGUserControl-ChooseThemes.resx">
+      <DependentUpon>SGUserControl-ChooseThemes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-BackgroundForm.resx">
+      <DependentUpon>SGForm-BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-FindFileListAndShowInListView.resx">
+      <DependentUpon>SGForm-FindFileListAndShowInListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-GuidDialog.resx">
+      <DependentUpon>SGForm-GuidDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-Main.resx">
+      <DependentUpon>SGForm-Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-MessageDialog-Info.resx">
+      <DependentUpon>SGForm-MessageDialog-Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-CommonDialogs.resx">
+      <DependentUpon>SGForm-CommonDialogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-MessageDialog.resx">
+      <DependentUpon>SGForm-MessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-MoreFunctions.resx">
+      <DependentUpon>SGForm-MoreFunctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-SystemStyle.resx">
+      <DependentUpon>SGForm-SystemStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGChooseBox.resx">
+      <DependentUpon>SGChooseBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGSlidingDrawer.resx">
+      <DependentUpon>SGSlidingDrawer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGCheckBox.resx">
+      <DependentUpon>SGCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGItems.resx">
+      <DependentUpon>SGItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGNormalButton.resx">
+      <DependentUpon>SGNormalButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGTabPageControl.resx">
+      <DependentUpon>SGTabPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="控件\SGTextBox.resx">
+      <DependentUpon>SGTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-TasksChoose.resx">
+      <DependentUpon>SGForm-TasksChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-UpdateProgram.resx">
+      <DependentUpon>SGForm-UpdateProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SGForm-WIN10STYLE.resx">
+      <DependentUpon>SGForm-WIN10STYLE.CS</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_internet.sgcf" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_media.sgcf" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_pro.sgcf" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_public.sgcf" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_win8.sgcf" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\Images\Form\Back.png" />
+    <None Include="bin\Debug\Resources\Images\SystemStyle\SystemInfo\SystemInfo_32_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\SystemStyle\SystemBoot\SystemBoot_32_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\SystemStyle\SystemStyle_32_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form\MessageDialog_Error.png" />
+    <None Include="bin\Debug\Resources\Images\Form\MessageDialog_Ques.png" />
+    <None Include="bin\Debug\Resources\Images\Form\MessageDialog_InfoAndGanTan.png" />
+    <None Include="bin\Debug\Resources\Images\Form\CloseButton_MouseMove.png" />
+    <None Include="bin\Debug\Resources\Images\Form\Guding.png" />
+    <None Include="bin\Debug\Resources\Images\Form\MiniSize_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form\CloseButton_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopLink\PowerOff.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopLink\Lock.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopLink\LogOff.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopLink\ReStart.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopLink\Sleep.png" />
+    <None Include="bin\Debug\Resources\Images\Form\FirstFunctionChoose.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_1.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_2.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_3.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_4.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_5.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_6.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_7.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_8.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_9.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_10.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_11.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_12.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_13.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_14.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_15.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_16.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_17.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_18.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_19.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\Win8Back_20.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_1.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_2.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_3.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_4.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_5.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_6.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_7.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_8.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_9.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_10.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_11.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_12.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_13.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_14.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_15.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_16.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_17.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_18.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_19.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_20.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_21.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_22.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_23.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_24.png" />
+    <None Include="bin\Debug\Resources\Images\SatrtColorItems\Img_25.png" />
+    <None Include="bin\Debug\Resources\系统齿轮.png" />
+    <None Include="bin\Debug\Resources\SG_Lag.png" />
+    <None Include="bin\Debug\Resources\SG_SMALL.png" />
+    <None Include="bin\Debug\Resources\Images\Form\MSG_ERROR.png" />
+    <None Include="bin\Debug\Resources\Images\Form\MSG_INFO.png" />
+    <None Include="bin\Debug\Resources\Images\Form\MSG_QUES.png" />
+    <None Include="bin\Debug\Resources\Images\Pogress_Wait.gif" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemBoot_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemBoot_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_1_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_1_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_02_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_02_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_03_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_03_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_04_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_04_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_05_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_05_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_06_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_06_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_07_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_07_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\MainForm_Logos\SV_02_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\MainForm_Logos\SV_01_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\MainForm_Logos\SV_03_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\MainForm_Logos\SV_04_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\MainForm_Logos\SV_06_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\MainForm_Logos\SV_07_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_08_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\SystemStyle\SV_08_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Form_SystemStyle\MainForm_Logos\SV_08_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\IE_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\BackupSettings_Logo.png" />
+    <None Include="bin\Debug\Resources\Images\TaskBar_Logo.png" />
+    <None Include="bin\Debug\Resources\win8sc_choose.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\WinStore.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Finance.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Maps.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Travel.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Bing.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\People.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Video.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Sport.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Weather.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Message.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Music.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Games.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\News.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Mail.png" />
+    <None Include="bin\Debug\Interop.IWshRuntimeLibrary.dll" />
+    <None Include="bin\Debug\Resources\Images\TasksChoose.png" />
+    <None Include="bin\Debug\Resources\Images\TasksChoose_Blue.png" />
+    <None Include="bin\Debug\Resources\Images\Main_Image\M01\M01_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Main_Image\M01\M01_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Main_Image\M02\M02_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Main_Image\M02\M02_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Main_Image\M03\M03_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Main_Image\M03\M03_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\Main_Image\M04\M04_Choose.png" />
+    <None Include="bin\Debug\Resources\Images\Main_Image\M04\M04_Normal.png" />
+    <None Include="bin\Debug\Resources\Images\MetroLinks\Calendar.png" />
+    <None Include="bin\Debug\Resources\Images\Panel.png" />
+    <None Include="bin\Debug\Resources\Images\History\H01.png" />
+    <None Include="bin\Debug\Resources\Images\History\H02.png" />
+    <None Include="bin\Debug\Resources\Images\History\H03.png" />
+    <None Include="bin\Debug\Resources\Images\History\M04.png" />
+    <None Include="bin\Debug\Resources\itmilogo.png" />
+    <None Include="bin\Debug\Resources\DESKTOPLABELLOGO.png" />
+    <None Include="bin\Debug\Resources\PCLOCKERLOGO.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopIcon\User Files.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopIcon\Control Panel.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopIcon\Computer.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopIcon\Recycle Bin %28Empty%29.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopIcon\Network.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopIcon\Internet Explorer.png" />
+    <None Include="bin\Debug\Resources\Images\DesktopIcon\Explorer.png" />
+    <None Include="bin\Debug\Resources\Resources\SystemStyle\S01.png" />
+    <None Include="bin\Debug\Resources\Resources\SystemStyle\S02.png" />
+    <None Include="bin\Debug\Resources\Resources\SystemStyle\S03.png" />
+    <None Include="bin\Debug\Resources\Resources\SystemStyle\S04.png" />
+    <None Include="bin\Debug\Resources\Resources\SystemStyle\S05.png" />
+    <None Include="bin\Debug\Resources\Resources\SystemStyle\S06.png" />
+    <None Include="bin\Debug\Resources\Resources\SystemStyle\S07.png" />
+    <None Include="bin\Debug\Resources\Resources\SystemStyle\S08.png" />
+    <None Include="bin\Debug\Resources\Resources\M01.png" />
+    <None Include="bin\Debug\Resources\Resources\M02.png" />
+    <None Include="bin\Debug\Resources\Resources\M03.png" />
+    <None Include="bin\Debug\Resources\Resources\M04.png" />
+    <None Include="bin\Debug\Resources\Images\lOGO_CHOOSEICON.png" />
+    <None Include="bin\Debug\Resources\Images\LOGO_FUNCTIONEXPLORER.png" />
+    <None Include="bin\Debug\Resources\Images\LOGO_INPUTBOX.png" />
+    <None Include="bin\Debug\Resources\Images\LOGO_TASKSCHOOSE.png" />
+    <None Include="bin\Debug\Resources\LOGO_ChooseDisk.png" />
+    <None Include="bin\Debug\Resources\Tools\WinImageTool.png" />
+    <None Include="bin\Debug\Resources\DesktopIcons.png" />
+    <None Include="bin\Debug\Resources\Empty.png" />
+    <None Include="bin\Debug\Resources\ErrorLoadImage.png" />
+    <None Include="bin\Debug\Resources\OperateFile\ErrorFileOperate.png" />
+    <None Include="bin\Debug\Resources\OperateFile\FinishFileOperate.png" />
+    <None Include="bin\Debug\Resources\OperateFile\right_16x16.png" />
+    <None Include="bin\Debug\Resources\OperateFile\WaitFileOperate.png" />
+    <None Include="bin\Debug\Resources\OperateFile\OperatingFileOperate.png" />
+    <None Include="bin\Debug\Resources\ACCEXTRANAME.png" />
+    <None Include="bin\Debug\Resources\ACCNAME.png" />
+    <None Include="bin\Debug\Resources\ACCSIZE.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB01.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB02.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB03.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB04.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB05.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB06.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB07.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB08.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB09.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB10.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB11.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB12.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB13.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB14.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB15.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB16.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB17.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB18.png" />
+    <None Include="bin\Debug\Resources\Images\Windows8 BackImages\8.1\WIN81STB19.png" />
+    <None Include="bin\Debug\Resources\PublicSettingDialog.png" />
+    <None Include="bin\Debug\Resources\FileOperateTileImage.png" />
+    <None Include="bin\Debug\Resources\抽屉控件图片\Default_Close_Main.png" />
+    <None Include="bin\Debug\Resources\抽屉控件图片\Select_Expand_Main.png" />
+    <None Include="bin\Debug\Resources\抽屉控件图片\滑块.png" />
+    <None Include="bin\Debug\Resources.Image\SystemStyleLogo.png" />
+    <None Include="bin\Debug\Resources.Image\Message\Message_Error.png" />
+    <None Include="bin\Debug\Resources.Image\Message\Message_OK.png" />
+    <None Include="bin\Debug\Resources.Image\Message\Message_Question.png" />
+    <None Include="bin\Debug\Resources\TabControl\TabControl_DefaultBack.png" />
+    <None Include="bin\Debug\Resources\TabControl\TabControl_SelectBack.png" />
+    <None Include="bin\Debug\Resources\TabControl\TabControl_DefaultBackBack.png" />
+    <None Include="bin\Debug\Resources\选择滑块.png" />
+    <None Include="bin\Debug\2.5新引用的资源\选择滑块.png" />
+    <None Include="bin\Debug\2.5新引用的资源\POWEROFF.png" />
+    <None Include="bin\Debug\2.5新引用的资源\RESTART.png" />
+    <None Include="bin\Debug\2.5新引用的资源\LOCK.png" />
+    <None Include="bin\Debug\2.5新引用的资源\LOGOFF.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Message_Error.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Message_OK.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Message_Question.png" />
+    <None Include="bin\Debug\2.5新引用的资源\ReFlash.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Search.png" />
+    <None Include="bin\Debug\2.5新引用的资源\OK.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SelectFolderAndFiles.png" />
+    <None Include="bin\Debug\2.5新引用的资源\CommoonDlg_InputBox.png" />
+    <None Include="bin\Debug\2.5新引用的资源\NO_Button.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Message_Error16x16.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Message_OK16x16.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Message_Question16x16.png" />
+    <None Include="bin\Debug\2.5新引用的资源\AddButton.png" />
+    <None Include="bin\Debug\2.5新引用的资源\NewTasksChoose.png" />
+    <None Include="bin\Debug\2.5新引用的资源\todonumber\ToDoTip_1.png" />
+    <None Include="bin\Debug\2.5新引用的资源\todonumber\ToDoTip_2.png" />
+    <None Include="bin\Debug\2.5新引用的资源\todonumber\ToDoTip_3.png" />
+    <None Include="bin\Debug\2.5新引用的资源\todonumber\ToDoTip_4.png" />
+    <None Include="bin\Debug\2.5新引用的资源\todonumber\ToDoTip_5.png" />
+    <None Include="bin\Debug\2.5新引用的资源\IT迷38X38.png" />
+    <None Include="bin\Debug\2.5新引用的资源\EditButton.png" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_internet.txt" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_media.txt" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_pro.txt" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_public.txt" />
+    <None Include="bin\Debug\2.5.0.1004\Config\RightMenuGroups\bak\RightMenuGroup_win8.txt" />
+    <None Include="bin\Debug\2.5新引用的资源\Warring.png" />
+    <None Include="bin\Debug\2.5新引用的资源\PlayeButton.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Down.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Up.png" />
+    <None Include="bin\Debug\2.5新引用的资源\PreviewDialog.png" />
+    <None Include="bin\Debug\2.5新引用的资源\FunctionIsDesign.png" />
+    <None Include="bin\Debug\2.5新引用的资源\RightMenu.png" />
+    <None Include="bin\Debug\2.5新引用的资源\WinXMenus.png" />
+    <None Include="bin\Debug\2.5新引用的资源\ThisPC.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Main_Wallpaper.jpg" />
+    <None Include="bin\Debug\2.5新引用的资源\FromBackGround.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SubCommands.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogos\IconsMgr\IconsMgr_28x28.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\MainLogos_28x28\AllSettings_28x28.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\MainLogos_28x28\Help_28x28.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\MainLogos_28x28\Like_28x28.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\MainLogos_28x28\Settings_28x28.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\DefaultTiles\IELogo_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\DefaultTiles\BackupSettingsLogo_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\ALL 32X24\AllSettings_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\ALL 32X24\Help_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\ALL 32X24\Like_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\ALL 32X24\Settings_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogos\All\FileMgr_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogos\All\IconAndLinkMgr_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogos\All\RightMenusMgr_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogos\All\SystemBoot_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogos\All\SystemDialog_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogos\All\Win8Style_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\DefaultTiles\Help_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\SystemBoot\SystemBoot_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\Win8Style\Win8Style_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\FileMgr\FileMgr_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\MainDialog\BackSettings\BackupSettingsLogo_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\MainDialog\IE\IELogo_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\MainDialog\Help\Help_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\IconAndLinkMgr\IconAndLinkMgr_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\RightMenuMgr\RightMenusMgr_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\SystemDialog\SystemDialog_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\IconAndLinkMgr\IconAndLinkMgr_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\MainDialog\Info\Info_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MiniSize_White.gif" />
+    <None Include="bin\Debug\2.5新引用的资源\close.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogo_30x30.png" />
+    <None Include="bin\Debug\2.5新引用的资源\NextBtn.png" />
+    <None Include="bin\Debug\2.5新引用的资源\BackBtn.png" />
+    <None Include="bin\Debug\2.5新引用的资源\LockScreen_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\Win8Style\Win8Style_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Clipboard_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Win+XMenu_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\StartScreen.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Refexon_WaterMark_Color.png" />
+    <None Include="bin\Debug\2.5新引用的资源\RMCFGS\RightMenuGroup_internet.txt" />
+    <None Include="bin\Debug\2.5新引用的资源\RMCFGS\RightMenuGroup_media.txt" />
+    <None Include="bin\Debug\2.5新引用的资源\RMCFGS\RightMenuGroup_pro.txt" />
+    <None Include="bin\Debug\2.5新引用的资源\RMCFGS\RightMenuGroup_public.txt" />
+    <None Include="bin\Debug\2.5新引用的资源\RMCFGS\RightMenuGroup_win8.txt" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\RightMenuMgr\RightMenusMgr_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\FileMgr\FileMgr_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\SystemBoot\SystemBoot_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\SystemDialog\SystemDialog_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\MainDialog\IE\IELogo_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\MainDialog\BackSettings\BackupSettingsLogo_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\Like\Like_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\Like\Like_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\Settings\Settings_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\Settings\Settings_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\AllSettings\AllSettings_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\AllSettings\AllSettings_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\MainLogos\Help\Help_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\CLSIDIcon_Example.png" />
+    <None Include="bin\Debug\2.5新引用的资源\CLSIDIcons\CLSIDIcon_public.txt" />
+    <None Include="bin\Debug\2.5新引用的资源\RMCFGS\RightMenuGroup_powermgr.txt" />
+    <None Include="bin\Debug\2.5新引用的资源\Menu_white.png" />
+    <None Include="bin\Debug\2.5新引用的资源\play.png" />
+    <None Include="bin\Debug\2.5新引用的资源\DesktopLabel\DesktopLabel_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\DesktopLabel\DesktopLabel_72x72.png" />
+    <None Include="bin\Debug\2.5新引用的资源\LockScreen_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\DesktopLabel\DesktopLabel_32x32.png" />
+    <None Include="bin\Debug\2.5新引用的资源\Recover.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG3Logo_30x30.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG3Logo_96x96.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SelectFunctionBox.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SGLogos\All\BrowserMgr_32x24.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\BrowserMgr\BrowserMgr_36x36.png" />
+    <None Include="bin\Debug\2.5新引用的资源\SG功能Logo\SystemStyle\BrowserMgr\BrowserMgr_72x72.png" />
+    <None Include="Resources\BrowserMgr_36x36.png" />
+    <None Include="Resources\BrowserMgr_72x72.png" />
+    <None Include="Resources\FileMgr_36x36.png" />
+    <None Include="Resources\FileMgr_72x72.png" />
+    <None Include="Resources\FileMgr_256x256.png" />
+    <None Include="Resources\IconAndLinkMgr_36x36.png" />
+    <None Include="Resources\IconAndLinkMgr_72x72.png" />
+    <None Include="Resources\IconAndLinkMgr_256x256.png" />
+    <None Include="Resources\RightMenusMgr_36x36.png" />
+    <None Include="Resources\RightMenusMgr_72x72.png" />
+    <None Include="Resources\RightMenusMgr_256x256.png" />
+    <None Include="Resources\SystemBoot_36x36.png" />
+    <None Include="Resources\SystemBoot_72x72.png" />
+    <None Include="Resources\SystemBoot_256x256.png" />
+    <None Include="Resources\SystemDialog_36x36.png" />
+    <None Include="Resources\SystemDialog_72x72.png" />
+    <None Include="Resources\SystemDialog_256x256.png" />
+    <None Include="Resources\Win8Style_36x36.png" />
+    <None Include="Resources\Win8Style_72x72.png" />
+    <None Include="Resources\Win8Style_256x256.png" />
+    <None Include="Resources\BrowserMgr_32x24.png" />
+    <None Include="Resources\FileMgr_32x24.png" />
+    <None Include="Resources\IconAndLinkMgr_32x24.png" />
+    <None Include="Resources\RightMenusMgr_32x24.png" />
+    <None Include="Resources\SystemBoot_32x24.png" />
+    <None Include="Resources\SystemDialog_32x24.png" />
+    <None Include="Resources\Win8Style_32x24.png" />
+    <None Include="Resources\Win8Back_1.png" />
+    <None Include="Resources\Win8Back_2.png" />
+    <None Include="Resources\Win8Back_3.png" />
+    <None Include="Resources\Win8Back_4.png" />
+    <None Include="Resources\Win8Back_5.png" />
+    <None Include="Resources\Win8Back_6.png" />
+    <None Include="Resources\Win8Back_7.png" />
+    <None Include="Resources\Win8Back_8.png" />
+    <None Include="Resources\Win8Back_9.png" />
+    <None Include="Resources\Win8Back_10.png" />
+    <None Include="Resources\Win8Back_11.png" />
+    <None Include="Resources\Win8Back_12.png" />
+    <None Include="Resources\Win8Back_13.png" />
+    <None Include="Resources\Win8Back_14.png" />
+    <None Include="Resources\Win8Back_15.png" />
+    <None Include="Resources\Win8Back_16.png" />
+    <None Include="Resources\Win8Back_17.png" />
+    <None Include="Resources\Win8Back_18.png" />
+    <None Include="Resources\Win8Back_19.png" />
+    <None Include="Resources\Win8Back_20.png" />
+    <None Include="Resources\WIN81STB01.png" />
+    <None Include="Resources\WIN81STB02.png" />
+    <None Include="Resources\WIN81STB03.png" />
+    <None Include="Resources\WIN81STB04.png" />
+    <None Include="Resources\WIN81STB05.png" />
+    <None Include="Resources\WIN81STB06.png" />
+    <None Include="Resources\WIN81STB07.png" />
+    <None Include="Resources\WIN81STB08.png" />
+    <None Include="Resources\WIN81STB09.png" />
+    <None Include="Resources\WIN81STB10.png" />
+    <None Include="Resources\WIN81STB11.png" />
+    <None Include="Resources\WIN81STB12.png" />
+    <None Include="Resources\WIN81STB13.png" />
+    <None Include="Resources\WIN81STB14.png" />
+    <None Include="Resources\WIN81STB15.png" />
+    <None Include="Resources\WIN81STB16.png" />
+    <None Include="Resources\WIN81STB17.png" />
+    <None Include="Resources\WIN81STB18.png" />
+    <None Include="Resources\WIN81STB19.png" />
+    <None Include="Resources\WinXmenus.png" />
+    <None Include="Resources\选择滑块.png" />
+    <None Include="Resources\LOCK.png" />
+    <None Include="Resources\SG3Logo_30x30.png" />
+    <None Include="Resources\SG3Logo_96x96.png" />
+    <None Include="Resources\Message_Error.png" />
+    <None Include="Resources\Message_OK.png" />
+    <None Include="Resources\Message_Question.png" />
+    <None Include="Resources\AllSettings_28x28.png" />
+    <None Include="Resources\AllSettings_36x36.png" />
+    <None Include="Resources\AllSettings_72x72.png" />
+    <None Include="Resources\AllSettings_256x256.png" />
+    <None Include="Resources\BackupSettingsLogo_72x72.png" />
+    <None Include="Resources\BackupSettingsLogo_36x36.png" />
+    <None Include="Resources\Help_28x28.png" />
+    <None Include="Resources\Help_36x36.png" />
+    <None Include="Resources\Help_72x72.png" />
+    <None Include="Resources\Help_256x256.png" />
+    <None Include="Resources\IELogo_36x36.png" />
+    <None Include="Resources\IELogo_72x72.png" />
+    <None Include="Resources\Info_72x72.png" />
+    <None Include="Resources\Like_28x28.png" />
+    <None Include="Resources\Like_36x36.png" />
+    <None Include="Resources\Like_72x72.png" />
+    <None Include="Resources\Like_256x256.png" />
+    <None Include="Resources\Settings_28x28.png" />
+    <None Include="Resources\Settings_36x36.png" />
+    <None Include="Resources\Settings_72x72.png" />
+    <None Include="Resources\AllSettings_32x24.png" />
+    <None Include="Resources\Help_32x24.png" />
+    <None Include="Resources\Like_32x24.png" />
+    <None Include="Resources\Settings_32x24.png" />
+    <None Include="Resources\CommandArgs.txt" />
+    <None Include="Resources\DefaultWebSite.txt" />
+    <None Include="Resources\RunAsAdmin.txt" />
+    <None Include="Resources\WhatIsNew.txt" />
+    <None Include="Resources\CLSIDIcon_public.txt" />
+    <None Include="Resources\RightMenuGroup_internet.txt" />
+    <None Include="Resources\RightMenuGroup_media.txt" />
+    <None Include="Resources\RightMenuGroup_powermgr.txt" />
+    <None Include="Resources\RightMenuGroup_pro.txt" />
+    <None Include="Resources\RightMenuGroup_public.txt" />
+    <None Include="Resources\RightMenuGroup_win8.txt" />
+    <None Include="Resources\ToDoTip_1.png" />
+    <None Include="Resources\ToDoTip_2.png" />
+    <None Include="Resources\ToDoTip_3.png" />
+    <None Include="Resources\ToDoTip_4.png" />
+    <None Include="Resources\ToDoTip_5.png" />
+    <None Include="Resources\AddButton.png" />
+    <None Include="Resources\BackBtn.png" />
+    <None Include="Resources\Clipboard_72x72.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\FunctionIsDesign.png" />
+    <None Include="Resources\IT迷38X38.png" />
+    <None Include="Resources\LockScreen_72x72.png" />
+    <None Include="Resources\LOGO_ChooseDisk.png" />
+    <None Include="Resources\Menu_white.png" />
+    <None Include="Resources\MiniSize_White.gif" />
+    <None Include="Resources\NextBtn.png" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\Recover.png" />
+    <None Include="Resources\RefexonLogo.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Select_Expand_Main.png" />
+    <None Include="Resources\SelectFolderAndFiles.png" />
+    <None Include="Resources\SelectFunctionBox.png" />
+    <None Include="Resources\TaskBar_Logo.png" />
+    <None Include="Resources\Warring.png" />
+    <None Include="Resources\Win_XMenu_72x72.png" />
+    <None Include="Resources\Down.png" />
+    <None Include="Resources\EditButton.png" />
+    <None Include="Resources\LOGOFF.png" />
+    <None Include="Resources\POWEROFF.png" />
+    <None Include="Resources\RESTART.png" />
+    <None Include="Resources\SubCommands.png" />
+    <None Include="Resources\Up.png" />
+    <None Include="Resources\win8sc_choose.png" />
+    <None Include="Resources\RightMenu.png" />
+    <None Include="Resources\DesktopLabel_32x32.png" />
+    <None Include="Resources\DesktopLabel_72x72.png" />
+    <None Include="Resources\top_left.png" />
+    <None Include="Resources\top.png" />
+    <None Include="Resources\top_left1.png" />
+    <None Include="Resources\top1.png" />
+    <None Include="Resources\top_left2.png" />
+    <None Include="Resources\top2.png" />
+    <None Include="Resources\top_zhe1.png" />
+    <None Include="Resources\top_zhe11.png" />
+    <None Include="Resources\top_zhe2.png" />
+    <None Include="Resources\LockScreen_36x36.png" />
+    <None Include="Resources\ChangeSkin.png" />
+    <None Include="Resources\SkinSelected.png" />
+    <None Include="Resources\CurrentVersion.png" />
+    <None Include="Resources\UpdateVersion.png" />
+    <None Include="Resources\UpdateDetail.png" />
+    <None Include="Resources\UpdateFileSize.png" />
+    <None Include="Resources\RefexonLogo_36x36.png" />
+    <None Include="Resources\DesktopLabel_36x36.png" />
+    <None Include="Resources\GiveFeedbackbyQQ.png" />
+    <None Include="Resources\GiveFeedbackbywebpage.png" />
+    <None Include="Resources\GiveFeedbackbyEMAIL.png" />
+    <None Include="Resources\SendMEeQQMessange.png" />
+    <None Include="Resources\GiveFeedbackbyFacebook.png" />
+    <None Include="Resources\ProgressBar_Wait.gif" />
+    <Content Include="SG3Logo_Icon.ico" />
+    <Content Include="SystemGearLogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

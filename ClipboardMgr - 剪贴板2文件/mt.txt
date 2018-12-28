@@ -1,0 +1,1 @@
+mt.exe /nologo /manifest "F:\Refexon软件源代码\ClipboardMgr\工程1.exe.manifest" /outputresource:"F:\Refexon软件源代码\ClipboardMgr\SGCLIPMGR.exe";1
